@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titlename %} Home Page {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/homestyle.css')}}">
+{% endblock %}
+{% block content %}
+<div class="main-div">
+  <h1 class = "h1">
+    Welcome to the Heart Disease Prediction Tool
+  </h1>
+  <p class = "p1">
+    Empowering you with insights into your heart health.<br> 
+  </p>
+  <img src="{{ url_for('static', filename='images/AI_Cardio.jpeg') }}" 
+       alt="Heart Health Prediction" class="heart">
+  <p class = "p2">
+    "Your heart is at the center of everything. Let us help you keep it healthy."
+  </p>
+  <a href="/prediction" class="button">
+    Ready to Predict?
+  </a>
+</div>
+<script>
+  function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+  }
+</script>
+{% endblock %}

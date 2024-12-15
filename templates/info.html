@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block titlename %} Heart Disease Risk Reduction {% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/infostyle.css')}}">
+{% endblock %}
+
+{% block content %}
+<h1>How to Lower the Risk of Heart Disease</h1>
+<div class="container">
+  <p class="p1">Heart disease is a serious condition, but there are many ways to lower your risk. Here are some tips:</p>
+  <ul>
+    <li><strong>Eat a heart-healthy diet:</strong> Focus on eating more fruits, vegetables, whole grains, and lean proteins. Avoid saturated and trans fats.</li>
+    <li><strong>Exercise regularly:</strong> Aim for at least 30 minutes of moderate physical activity most days of the week.</li>
+    <li><strong>Maintain a healthy weight:</strong> Losing weight if you're overweight can reduce the strain on your heart and lower your risk of heart disease.</li>
+    <li><strong>Avoid smoking:</strong> Smoking increases the risk of heart disease by damaging blood vessels and reducing oxygen in the blood.</li>
+    <li><strong>Control blood pressure:</strong> High blood pressure can damage the heart and arteries. Regular check-ups and medications (if necessary) are essential.</li>
+    <li><strong>Manage stress:</strong> Chronic stress can affect your heart health, so make sure to take time to relax and unwind.</li>
+  </ul>
+</div>
+{% endblock %}

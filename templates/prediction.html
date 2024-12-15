@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block titlename %} Prediction Page {% endblock %}
+
+{% block style %}
+   <link rel="stylesheet" href="{{url_for('static', filename='css/predictstyle.css')}}">
+{% endblock %}
+{% block content %}
+    <h3 class="h3">Please enter the following details</h3>
+    <div class="container">
+        <form action="/heart-disease-predict" method="POST">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" max="80" required title="Please enter a valid age between 1 and 80">
+            </div>
+            <div class="form-group">
+                <label for="sex">Sex</label>
+                <input type="number" id="sex" name="sex" min="0" max="1" required title="Please enter 1 for male and 0 for female">
+            </div>
+            <div class="form-group">
+                <label for="cp">CP</label>
+                <input type="number" id="cp" name="cp" min="0" max="3" required title="Please enter a value from 0, 1, 2 and 3">
+            </div>
+            <div class="form-group">
+                <label for="trestbps">Resting Blood Pressure (trestbps)</label>
+                <input type="number" id="trestbps" name="trestbps" required>
+            </div>
+            <div class="form-group">
+                <label for="chol">Cholesterol (chol)</label>
+                <input type="number" id="chol" name="chol" min="126" max="564" required>
+            </div>
+            <div class="form-group">
+                <label for="fbs">Fasting Blood Sugar (fbs)</label>
+                <input type="number" id="fbs" name="fbs" min="0" max="1" required title="If fbs > 120 then enter 1 otherwise 0">
+            </div>
+            <div class="form-group">
+                <label for="restecg">Resting Electrocardiographic Results (restecg)</label>
+                <input type="number" id="restecg" name="restecg" min="0" max="2" required title="Please enter a value from 0, 1 and 2">
+            </div>
+            <div class="form-group">
+                <label for="thalach">Maximum Heart Rate (thalach)</label>
+                <input type="number" id="thalach"  name="thalach" min="71" max="202" required title="Please enter maximum heart rate value">
+            </div>
+            <div class="form-group">
+                <label for="exang">Exercise Induced Angina (exang)</label>
+                <input type="number" id="exang" name="exang" min="0" max="1" required title="Please enter 1 if pain exists otherwise 0">
+            </div>
+            <div class="form-group">
+                <label for="oldpeak">Old Peak Depression (oldpeak)</label>
+                <input type="number" id="oldpeak" name="oldpeak" min="0" max="6.2" step="0.1" required title="Please enter a decimal value greater than 0">
+            </div>
+            <div class="form-group">
+                <label for="slope">Slope (slope)</label>
+                <input type="number" id="slope" name="slope" required title="Please enter a value from 0, 1 and 2">
+            </div>
+            <div class="form-group">
+                <label for="ca">Number of Major Vessels (ca)</label>
+                <input type="number" id="ca" name="ca" min="0" max="4" required title="Please enter a value from 0, 1, 2, 3 and 4">
+            </div>
+            <div class="form-group">
+                <label for="thal">Thalassemia (thal)</label>
+                <input type="number" id="thal" name="thal" min="1" max="3" required title="Please enter 1 for normal, 2 for fixed defect, 3 for reversable defect">
+            </div>
+            <button type="submit">Get Prediction</button>
+        </form>
+    </div>
+{% endblock %}
