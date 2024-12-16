@@ -49,38 +49,6 @@ body{
   transition: background-color 0.3s;
 }
 
-nav {
-  background-color: #333; /* Dark background */
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-nav ul li a:hover {
-  color: #00c3ff; /* Highlight on hover */
-}
-
-/* Center content styling
 .content {
   text-align: center;
   margin-top: 20px;
@@ -90,7 +58,7 @@ nav ul li a:hover {
   max-width: 100%;
   height: auto;
   margin-top: 20px;
-} */
+}
 
 .predict-button {
   margin-top: 20px;
